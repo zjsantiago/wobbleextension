@@ -1,0 +1,25 @@
+{
+   "background": {
+      "page": "main.html"
+   },
+   "browser_action": {
+      "default_icon": "assets/images/icon_off.png",
+      "default_title": "找美图"
+   },
+   "description": "找美图",
+   "icons": {
+      "16": "assets/images/icon_off.png",
+      "38": "assets/images/icon_on.png"
+   },
+   "manifest_version": 2,
+   "name": "找美图",
+   "permissions": ["tabs", "activeTab"],
+   "content_scripts": [
+      {
+         "matches": ["http://*/*"],
+         "css": ["assets/styles/panel.css"],
+         "js": ["assets/scripts/content_script.js"]
+      }
+   ],
+   "version": "1.0.0"
+}
